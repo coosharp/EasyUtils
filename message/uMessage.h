@@ -63,6 +63,7 @@ struct uMessage
 /**********************
 *  GLOBAL PROTOTYPES
  **********************/
+
 void uMessage_subscribe(struct uMessage * message, 
                         uMessage_id_t id, 
                         uMessage_callback_t callback, 
