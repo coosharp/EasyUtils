@@ -37,9 +37,5 @@ int main(void)
     uMessage_publish(UMESSAGE_WIFI_CONNECTED);
     uMessage_publish(UMESSAGE_POWER_ON);
 
-    for(;;) {
-
-    }
-
     return 0;
 }
