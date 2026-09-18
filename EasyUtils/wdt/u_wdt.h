@@ -21,22 +21,18 @@ extern "C" {
  *********************/
 struct u_wdt
 {
-    char name[32];
-    uint32_t last_tick;
-    uint32_t timeout;
-    struct u_wdt * next;
+        char name[32];
+        uint32_t last_tick;
+        uint32_t timeout;
+        struct u_wdt * next;
 };
 
 
 void u_wdt_increase_tick(uint32_t tick_period);
-
-void u_wdt_register(struct u_wdt * wdg, const char * name, uint32_t timeout);
-
-void u_wdt_logout(struct u_wdt * wdg);
-
-void u_wdt_reload(struct u_wdt * wdg);
-
-void u_wdt_loop(struct u_wdt ** wdg_timeout);
+void u_wdt_register     (struct u_wdt * wdg, const char * name, uint32_t timeout);
+void u_wdt_logout       (struct u_wdt * wdg);
+void u_wdt_reload       (struct u_wdt * wdg);
+void u_wdt_loop         (struct u_wdt ** wdg_timeout);
 
 
 /**********************
@@ -44,12 +40,12 @@ void u_wdt_loop(struct u_wdt ** wdg_timeout);
  **********************/
 static inline const char * u_wdt_get_name(struct u_wdt * wdg)
 {
-    return wdg->name;
+        return wdg->name;
 }
 
 static inline uint32_t u_wdt_get_timeout(struct u_wdt * wdg)
 {
-    return wdg->timeout;
+        return wdg->timeout;
 }
 
 
